@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Inter", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #1E3A6B;
+  --color-primary-dark: #152A50;
+  --color-primary-hover: #2C5282;
+  --color-primary-bg: #EBF0F7;
+
+  --color-accent: #F59E0B;
+  --color-accent-dark: #D4850A;
+  --color-accent-hover: #FBBF24;
+  --color-accent-bg: #FFF8EC;
+
+  --color-surface: #F6F5F2;
+  --color-surface-alt: #F0EFEC;
+  --color-card: #FFFFFF;
+
+  --color-text-secondary: #374151;
+  --color-text-muted: #6B7280;
+  --color-text-dim: #9CA3AF;
+
+  --color-border: #E8E7E4;
+  --color-border-md: #D4D3D0;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl .text-center {
+  text-align: center;
+}
