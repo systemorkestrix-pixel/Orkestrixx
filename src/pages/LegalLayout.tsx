@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { usePageMeta } from '../lib/usePageMeta';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 
@@ -19,14 +19,10 @@ interface LegalLayoutProps {
 
 export default function LegalLayout({ titleMeta, descriptionMeta, pageTitle, sections, lastUpdatedDate }: LegalLayoutProps) {
   const { t, lang } = useLanguage();
+  usePageMeta(titleMeta, descriptionMeta);
 
   return (
     <>
-      <Helmet>
-        <title>{titleMeta}</title>
-        <meta name="description" content={descriptionMeta} />
-      </Helmet>
-
       <div className={`min-h-screen bg-surface ${lang === 'ar' ? 'rtl' : ''}`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
 

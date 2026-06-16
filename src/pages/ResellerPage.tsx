@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { usePageMeta } from '../lib/usePageMeta';
 import { ArrowLeft, Store, ShoppingBag, Wrench, Laptop, CheckCircle, Percent, Shield, HeadphonesIcon, Mail } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
@@ -74,14 +74,10 @@ const steps = [
 
 export default function ResellerPage() {
   const { t, lang } = useLanguage();
+  usePageMeta(t('resellerPage.title'), t('resellerPage.description'));
 
   return (
     <>
-      <Helmet>
-        <title>{t('resellerPage.title')}</title>
-        <meta name="description" content={t('resellerPage.description')} />
-      </Helmet>
-
       <div className={`min-h-screen bg-surface ${lang === 'ar' ? 'rtl' : ''}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
           <PageHeader title={t('resellerPage.title')} description={t('resellerPage.description')} backLabel={t('resellerPage.backToHome')} />

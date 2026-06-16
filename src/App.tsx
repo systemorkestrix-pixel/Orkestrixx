@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import { ReactNode } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -44,21 +43,19 @@ function HomePage() {
 
 export default function App() {
   return (
-    <HelmetProvider>
-      <LanguageProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/mentions-legales" element={<PageShell><LegalMentions /></PageShell>} />
-            <Route path="/confidentialite" element={<PageShell><PrivacyPolicy /></PageShell>} />
-            <Route path="/cgv" element={<PageShell><CGV /></PageShell>} />
-            <Route path="/revendeur" element={<PageShell><ResellerPage /></PageShell>} />
-            <Route path="/comment-acheter" element={<PageShell><PurchaseProcess /></PageShell>} />
-            <Route path="*" element={<PageShell><NotFound /></PageShell>} />
-          </Routes>
-        </BrowserRouter>
-      </LanguageProvider>
-    </HelmetProvider>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/mentions-legales" element={<PageShell><LegalMentions /></PageShell>} />
+          <Route path="/confidentialite" element={<PageShell><PrivacyPolicy /></PageShell>} />
+          <Route path="/cgv" element={<PageShell><CGV /></PageShell>} />
+          <Route path="/revendeur" element={<PageShell><ResellerPage /></PageShell>} />
+          <Route path="/comment-acheter" element={<PageShell><PurchaseProcess /></PageShell>} />
+          <Route path="*" element={<PageShell><NotFound /></PageShell>} />
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 

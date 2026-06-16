@@ -1,16 +1,13 @@
-import { Helmet } from 'react-helmet-async';
+import { usePageMeta } from '../lib/usePageMeta';
 import { useLanguage } from '../context/LanguageContext';
 import PageHeader from '../components/PageHeader';
 
 export default function NotFound() {
   const { t } = useLanguage();
+  usePageMeta(t('notFound.title'), t('notFound.description'));
 
   return (
     <>
-      <Helmet>
-        <title>{t('notFound.title')}</title>
-        <meta name="description" content={t('notFound.description')} />
-      </Helmet>
       <div className="min-h-screen bg-surface">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
           <PageHeader title={t('notFound.heading')} backLabel={t('legal.backToHome')} />

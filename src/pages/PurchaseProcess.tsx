@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { usePageMeta } from '../lib/usePageMeta';
 import { Download, Play, Wallet, CheckCircle, Key, Smartphone, Building2, CreditCard, Bitcoin, Landmark } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
@@ -72,14 +72,10 @@ const paymentMethods = [
 
 export default function PurchaseProcess() {
   const { t, lang } = useLanguage();
+  usePageMeta(`${t('purchaseProcess.title')} — Orkestrix System Manager`, t('purchaseProcess.description'));
 
   return (
     <>
-      <Helmet>
-        <title>{t('purchaseProcess.title')} — Orkestrix System Manager</title>
-        <meta name="description" content={t('purchaseProcess.description')} />
-      </Helmet>
-
       <div className={`min-h-screen bg-surface ${lang === 'ar' ? 'rtl' : ''}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
           <PageHeader title={t('purchaseProcess.title')} description={t('purchaseProcess.description')} backLabel={t('purchaseProcess.backToHome')} />
