@@ -103,11 +103,9 @@ export default function Workflow() {
              <p className="text-text-secondary text-base mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
                {t('workflow.ctaDescription')}
              </p>
-             <a 
-               href="https://www.mediafire.com/file/et4b25bb84x6fbf/OrkestrixSystemManager-Setup-1.0.0.exe/file"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl transition-all shadow-sm"
+              <a 
+                href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl transition-all shadow-sm"
              >
                <Download className="w-5 h-5" />
                {t('workflow.ctaButton')}

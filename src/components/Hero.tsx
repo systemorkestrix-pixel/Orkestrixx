@@ -41,9 +41,7 @@ export default function Hero() {
             
             <div className="flex flex-col items-center gap-5">
               <a 
-                href="https://www.mediafire.com/file/et4b25bb84x6fbf/OrkestrixSystemManager-Setup-1.0.0.exe/file" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-accent hover:bg-accent-hover text-white text-lg font-bold rounded-xl transition-all shadow-sm hover:-translate-y-1"
               >
                 <Download className="w-6 h-6" />

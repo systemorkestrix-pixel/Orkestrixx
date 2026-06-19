@@ -39,9 +39,7 @@ export default function Header() {
             <a href="#partners" className="text-sm font-medium text-text-secondary hover:text-primary transition-colors">{t('header.partenaires')}</a>
             <LanguageSwitcher />
             <a 
-              href="https://www.mediafire.com/file/et4b25bb84x6fbf/OrkestrixSystemManager-Setup-1.0.0.exe/file" 
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
               className="px-5 py-2.5 bg-accent hover:bg-accent-hover text-white text-sm font-bold rounded-xl transition-all shadow-sm shadow-accent/20 flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
@@ -69,9 +67,7 @@ export default function Header() {
           <a href="#partners" className="block px-4 py-3 text-text-secondary font-medium hover:bg-surface-alt rounded-lg transition-colors" onClick={() => setMobileMenuOpen(false)}>{t('header.partenaires')}</a>
           <div className="pt-2 mt-2">
             <a 
-              href="https://www.mediafire.com/file/et4b25bb84x6fbf/OrkestrixSystemManager-Setup-1.0.0.exe/file"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
               className="flex justify-center items-center gap-2 px-4 py-3 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl w-full shadow-sm"
               onClick={() => setMobileMenuOpen(false)}
             >

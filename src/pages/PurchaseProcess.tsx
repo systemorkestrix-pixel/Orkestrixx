@@ -141,9 +141,7 @@ export default function PurchaseProcess() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="https://www.mediafire.com/file/et4b25bb84x6fbf/OrkestrixSystemManager-Setup-1.0.0.exe/file"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
                   className="inline-flex items-center gap-3 px-10 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl transition-all shadow-sm hover:-translate-y-0.5"
                 >
                   <Download className="w-5 h-5" />
