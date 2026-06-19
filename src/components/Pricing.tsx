@@ -83,7 +83,9 @@ export default function Pricing() {
             <div className="p-8 pt-4 text-center border-t border-border">
               <p className="text-xs text-text-dim mb-4 font-medium">{t('pricing.paymentText')}</p>
               <a
-                href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
+                href="https://github.com/systemorkestrix-pixel/Orkestrixx/releases/download/v1.0.0/OrkestrixSystemManager-Setup-1.0.0.exe"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 w-full px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl transition-all shadow-sm hover:-translate-y-0.5"
               >
                 <Download className="w-5 h-5" />

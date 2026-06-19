@@ -39,7 +39,9 @@ export default function Header() {
             <a href="#partners" className="text-sm font-medium text-text-secondary hover:text-primary transition-colors">{t('header.partenaires')}</a>
             <LanguageSwitcher />
             <a 
-              href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
+              href="https://github.com/systemorkestrix-pixel/Orkestrixx/releases/download/v1.0.0/OrkestrixSystemManager-Setup-1.0.0.exe"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2.5 bg-accent hover:bg-accent-hover text-white text-sm font-bold rounded-xl transition-all shadow-sm shadow-accent/20 flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
@@ -67,7 +69,9 @@ export default function Header() {
           <a href="#partners" className="block px-4 py-3 text-text-secondary font-medium hover:bg-surface-alt rounded-lg transition-colors" onClick={() => setMobileMenuOpen(false)}>{t('header.partenaires')}</a>
           <div className="pt-2 mt-2">
             <a 
-              href="/downloads/OrkestrixSystemManager-Setup-1.0.0.exe"
+              href="https://github.com/systemorkestrix-pixel/Orkestrixx/releases/download/v1.0.0/OrkestrixSystemManager-Setup-1.0.0.exe"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-center items-center gap-2 px-4 py-3 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl w-full shadow-sm"
               onClick={() => setMobileMenuOpen(false)}
             >
