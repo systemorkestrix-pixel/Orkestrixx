@@ -54,7 +54,7 @@ export default function ScreenshotCarousel({ screenshots, onImageClick, isLightb
   };
 
   return (
-    <div className="relative select-none">
+    <div className="relative select-none" dir="ltr">
       <div className="relative overflow-hidden">
         <motion.div
           className="flex items-center"
@@ -69,7 +69,7 @@ export default function ScreenshotCarousel({ screenshots, onImageClick, isLightb
             return (
               <div
                 key={i}
-                className="min-w-full flex-shrink-0 flex items-center justify-center py-6 sm:py-8 md:py-10"
+                className="min-w-full flex-shrink-0 flex items-center justify-center py-4 sm:py-8 md:py-10"
               >
                 <div
                   className={`
@@ -105,14 +105,14 @@ export default function ScreenshotCarousel({ screenshots, onImageClick, isLightb
 
         <button
           onClick={prev}
-          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-text-secondary shadow-md hover:shadow-lg flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 hover:opacity-100 focus-visible:opacity-100 backdrop-blur-sm"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-text-secondary shadow-md hover:shadow-lg flex items-center justify-center transition-all z-10 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 backdrop-blur-sm"
           aria-label={t('screenshots.prev')}
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={next}
-          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-text-secondary shadow-md hover:shadow-lg flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 hover:opacity-100 focus-visible:opacity-100 backdrop-blur-sm"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-text-secondary shadow-md hover:shadow-lg flex items-center justify-center transition-all z-10 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 backdrop-blur-sm"
           aria-label={t('screenshots.next')}
         >
           <ChevronRight className="w-5 h-5" />
