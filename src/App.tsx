@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import WhatYouCanDo from './components/WhatYouCanDo';
 import Features from './components/Features';
 import Workflow from './components/Workflow';
-import Screenshots from './components/Screenshots';
 import Trust from './components/Trust';
 import Pricing from './components/Pricing';
 import TargetAudience from './components/TargetAudience';
@@ -30,7 +29,6 @@ function HomePage() {
         <WhatYouCanDo />
         <Features />
         <Workflow />
-        <Screenshots />
         <Trust />
         <Pricing />
         <TargetAudience />

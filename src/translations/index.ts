@@ -13,9 +13,9 @@ export type TranslationKey =
   | 'whatYouCanDo.item4Title' | 'whatYouCanDo.item4Desc'
   | 'whatYouCanDo.item5Title' | 'whatYouCanDo.item5Desc'
   | 'whatYouCanDo.item6Title' | 'whatYouCanDo.item6Desc'
-  | 'screenshots.title' | 'screenshots.description'
   | 'screenshots.altDashboard' | 'screenshots.altPOS' | 'screenshots.altStock'
   | 'screenshots.altSales' | 'screenshots.altSuppliers' | 'screenshots.altReports'
+  | 'screenshots.prev' | 'screenshots.next' | 'screenshots.close' | 'screenshots.dot'
   | 'trust.title' | 'trust.description'
   | 'trust.item1' | 'trust.item2' | 'trust.item3' | 'trust.item4'
   | 'trust.item5' | 'trust.item6'
@@ -51,7 +51,7 @@ export type TranslationKey =
   | 'footer.windowsDesktop'   | 'footer.copyright' | 'footer.license'
   | 'footer.informations' | 'footer.commentAcheter' | 'footer.programmeRevendeur' | 'footer.contact'
   | 'footer.groupeProduit' | 'footer.groupeEntreprise'
-  | 'footer.fonctionnalites' | 'footer.captures'
+  | 'footer.fonctionnalites'
   | 'reseller.learnMore'
   | 'features.title' | 'features.description'
   | 'features.item1Title' | 'features.item1Desc'
@@ -195,14 +195,16 @@ const translations: Record<TranslationKey, { fr: string; ar: string }> = {
   'whatYouCanDo.item6Desc': { fr: '', ar: '' },
 
   // Screenshots
-  'screenshots.title': { fr: 'Aperçu du logiciel', ar: 'نظرة على البرنامج' },
-  'screenshots.description': { fr: 'Interface rapide, lisible et efficace. Licence à vie.', ar: 'واجهة سريعة، واضحة، فعالة. رخصة مدى الحياة.' },
   'screenshots.altDashboard': { fr: 'Tableau de bord principal', ar: 'لوحة التحكم الرئيسية' },
   'screenshots.altPOS': { fr: 'Interface de point de vente', ar: 'واجهة نقطة البيع' },
   'screenshots.altStock': { fr: 'Gestion des stocks', ar: 'إدارة المخزون' },
   'screenshots.altSales': { fr: 'Historique des ventes', ar: 'سجل المبيعات' },
   'screenshots.altSuppliers': { fr: 'Gestion des fournisseurs', ar: 'إدارة الموردين' },
   'screenshots.altReports': { fr: 'Rapports', ar: 'التقارير' },
+  'screenshots.prev': { fr: 'Précédent', ar: 'السابق' },
+  'screenshots.next': { fr: 'Suivant', ar: 'التالي' },
+  'screenshots.close': { fr: 'Fermer', ar: 'إغلاق' },
+  'screenshots.dot': { fr: 'Capture', ar: 'لقطة' },
 
   // Trust — Why Orkestrix (merged with Investment)
   'trust.title': { fr: 'Pourquoi Orkestrix ?', ar: 'لماذا أوركيستريكس؟' },
@@ -303,7 +305,7 @@ const translations: Record<TranslationKey, { fr: string; ar: string }> = {
   'footer.groupeEntreprise': { fr: 'Entreprise', ar: 'الشركة' },
 
   'footer.fonctionnalites': { fr: 'Fonctionnalités', ar: 'الميزات' },
-  'footer.captures': { fr: 'Captures d\'écran', ar: 'لقطات الشاشة' },
+
   'reseller.learnMore': { fr: 'En savoir plus', ar: 'اعرف المزيد' },
 
   // Legal pages

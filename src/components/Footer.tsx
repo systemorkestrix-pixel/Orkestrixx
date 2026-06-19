@@ -49,7 +49,6 @@ export default function Footer() {
             <h4 className="text-sm font-bold mb-5 text-text-secondary">{t('footer.groupeProduit')}</h4>
             <ul className="space-y-3">
               <li><a href="/#modules" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">{t('footer.fonctionnalites')}</a></li>
-              <li><a href="/#captures" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">{t('footer.captures')}</a></li>
               <li><a href="/#pricing" className="text-sm font-medium text-text-muted hover:text-primary transition-colors">{t('footer.tarifs')}</a></li>
             </ul>
           </div>

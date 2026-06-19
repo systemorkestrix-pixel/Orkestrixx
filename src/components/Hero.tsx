@@ -1,9 +1,38 @@
+import { useState, useCallback } from 'react';
 import { Download, Shield } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
+import ScreenshotCarousel from './ScreenshotCarousel';
+import ScreenshotLightbox from './ScreenshotLightbox';
+
+const SCREENSHOTS: { src: string; altKey: string }[] = [
+  { src: '/assets/dashboard-screenshot.PNG', altKey: 'screenshots.altDashboard' },
+  { src: '/assets/Piont De vente.PNG', altKey: 'screenshots.altPOS' },
+  { src: '/assets/Inventaire.PNG', altKey: 'screenshots.altStock' },
+  { src: '/assets/Ventes.PNG', altKey: 'screenshots.altSales' },
+  { src: '/assets/Fournisseurs.PNG', altKey: 'screenshots.altSuppliers' },
+  { src: '/assets/Rapports.PNG', altKey: 'screenshots.altReports' },
+];
 
 export default function Hero() {
   const { t } = useLanguage();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const openLightbox = useCallback((index: number) => {
+    setLightboxIndex(index);
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setLightboxIndex(null);
+  }, []);
+
+  const lightboxPrev = useCallback(() => {
+    setLightboxIndex(i => i !== null ? (i - 1 + SCREENSHOTS.length) % SCREENSHOTS.length : null);
+  }, []);
+
+  const lightboxNext = useCallback(() => {
+    setLightboxIndex(i => i !== null ? (i + 1) % SCREENSHOTS.length : null);
+  }, []);
 
   return (
     <section className="relative overflow-hidden pt-28 pb-24 bg-gradient-to-b from-surface to-surface-alt">
@@ -59,14 +88,22 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="max-w-[1000px] mx-auto px-4 mt-16 relative z-10"
       >
-        <div className="rounded-xl border border-border bg-surface shadow-lg overflow-hidden">
-            <img 
-               src="/assets/dashboard-screenshot.PNG" 
-               alt={t('hero.screenshotAlt')} 
-               className="w-full h-auto"
-            />
+        <div className="group">
+          <ScreenshotCarousel screenshots={SCREENSHOTS} onImageClick={openLightbox} isLightboxOpen={lightboxIndex !== null} />
         </div>
       </motion.div>
+
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <ScreenshotLightbox
+            screenshots={SCREENSHOTS}
+            currentIndex={lightboxIndex}
+            onClose={closeLightbox}
+            onPrev={lightboxPrev}
+            onNext={lightboxNext}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
