@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { Download, Shield } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
-import { formatPrice, PRICE_AMOUNT } from '../lib/formatPrice';
+import PriceDisplay from './PriceDisplay';
 import ScreenshotCarousel from './ScreenshotCarousel';
 import ScreenshotLightbox from './ScreenshotLightbox';
 
@@ -16,7 +16,7 @@ const SCREENSHOTS: { src: string; altKey: string }[] = [
 ];
 
 export default function Hero() {
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const openLightbox = useCallback((index: number) => {
@@ -54,7 +54,7 @@ export default function Hero() {
                 <Shield className="w-4 h-4 text-accent-dark" />
                 {t('pricing.badge')}
               </div>
-              <span dir={lang === 'ar' ? 'rtl' : 'ltr'} className="text-6xl md:text-7xl font-black text-accent-dark tracking-tight leading-none block py-3">{formatPrice(PRICE_AMOUNT, lang)}</span>
+              <PriceDisplay />
               <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm font-bold text-text-secondary mt-1">
                 <span>{t('pricing.benefit1')}</span>
                 <span className="w-1 h-1 rounded-full bg-border"></span>

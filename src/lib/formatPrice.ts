@@ -4,7 +4,7 @@ export const PRICE_AMOUNT = 7250;
 
 export function formatPrice(amount: number, lang: Language): string {
   if (lang === 'ar') {
-    return `د.ج ${amount.toLocaleString('en-US')}`;
+    return `${amount.toLocaleString('en-US')} د.ج`;
   }
   return `${amount.toLocaleString('fr-DZ')} DA`;
 }

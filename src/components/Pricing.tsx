@@ -1,7 +1,8 @@
 import { Check, Download, CreditCard, Building2, Smartphone } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
-import { formatPrice, embedPrice, PRICE_AMOUNT } from '../lib/formatPrice';
+import { embedPrice } from '../lib/formatPrice';
+import PriceDisplay from './PriceDisplay';
 
 const benefits = [
   'pricing.benefit1',
@@ -13,7 +14,7 @@ const benefits = [
 ] as const;
 
 export default function Pricing() {
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section id="pricing" className="py-24 bg-surface-alt border-t border-border relative z-10">
@@ -39,7 +40,7 @@ export default function Pricing() {
                 {t('pricing.badge')}
               </div>
               <div className="flex items-baseline justify-center gap-2 mb-2">
-                <span dir={lang === 'ar' ? 'rtl' : 'ltr'} className="text-accent-dark text-6xl md:text-7xl font-black tracking-tight block py-3">{formatPrice(PRICE_AMOUNT, lang)}</span>
+                <PriceDisplay />
               </div>
               <p className="text-text-dim text-xs font-medium">{t('pricing.trialText')}</p>
 
