@@ -14,7 +14,7 @@ const benefits = [
 ] as const;
 
 export default function Pricing() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section id="pricing" className="py-24 bg-surface-alt border-t border-border relative z-10">
