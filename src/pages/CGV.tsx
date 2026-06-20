@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FileText, Package, Award, CreditCard, ShoppingCart, Truck, Undo2, ShieldCheck, Copyright, UserCheck, Handshake, Shield, Scale } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { embedPrice } from '../lib/formatPrice';
 import LegalLayout from './LegalLayout';
 
 export default function CGV() {
@@ -62,7 +63,7 @@ export default function CGV() {
             <>
               <p>{t('cgv.s4P1')}</p>
               <ul className="list-disc ps-5 space-y-1">
-                <li><strong>{t('cgv.s4Li1')}</strong></li>
+                <li><strong>{embedPrice(t('cgv.s4Li1'), lang)}</strong></li>
               </ul>
               <p>{t('cgv.s4P2')}</p>
             </>

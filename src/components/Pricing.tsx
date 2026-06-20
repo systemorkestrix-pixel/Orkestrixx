@@ -1,6 +1,7 @@
 import { Check, Download, CreditCard, Building2, Smartphone } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
+import { formatPrice, embedPrice, PRICE_AMOUNT } from '../lib/formatPrice';
 
 const benefits = [
   'pricing.benefit1',
@@ -20,9 +21,9 @@ export default function Pricing() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-text-secondary mb-4">{t('pricing.title')}</h2>
           <div className="w-20 h-1 rounded-full bg-accent mx-auto mb-6"></div>
-          <p className="text-lg text-text-secondary font-medium">
-            {t('pricing.description')}
-          </p>
+            <p className="text-lg text-text-secondary font-medium">
+              {embedPrice(t('pricing.description'), lang)}
+            </p>
         </div>
 
         <motion.div
@@ -38,7 +39,7 @@ export default function Pricing() {
                 {t('pricing.badge')}
               </div>
               <div className="flex items-baseline justify-center gap-2 mb-2">
-                <span dir={lang === 'ar' ? 'rtl' : 'ltr'} className="text-accent-dark text-6xl md:text-7xl font-black tracking-tight">{t('pricing.price')}</span>
+                <span dir="ltr" className="text-accent-dark text-6xl md:text-7xl font-black tracking-tight">{formatPrice(PRICE_AMOUNT, lang)}</span>
               </div>
               <p className="text-text-dim text-xs font-medium">{t('pricing.trialText')}</p>
 

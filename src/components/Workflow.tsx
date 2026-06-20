@@ -1,9 +1,10 @@
 import { Download, Database, Play, CheckCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
+import { embedPrice } from '../lib/formatPrice';
 
 export default function Workflow() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const steps = [
     {
@@ -24,7 +25,7 @@ export default function Workflow() {
     {
       icon: <CheckCircle className="w-6 h-6 text-white" />,
       title: t('workflow.step4Title'),
-      description: t('workflow.step4Desc')
+      description: embedPrice(t('workflow.step4Desc'), lang)
     },
     {
       icon: <ArrowRight className="w-6 h-6 text-white" />,
@@ -100,9 +101,9 @@ export default function Workflow() {
                {t('workflow.badge')}
              </div>
              <h3 className="text-2xl sm:text-3xl font-bold text-text-secondary mb-4">{t('workflow.ctaTitle')}</h3>
-             <p className="text-text-secondary text-base mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-               {t('workflow.ctaDescription')}
-             </p>
+              <p className="text-text-secondary text-base mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+                {embedPrice(t('workflow.ctaDescription'), lang)}
+              </p>
               <a 
                 href="https://github.com/systemorkestrix-pixel/Orkestrixx/releases/download/v1.0.0/OrkestrixSystemManager-Setup-1.0.0.exe"
                 target="_blank"
