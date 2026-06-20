@@ -39,7 +39,7 @@ export default function Pricing() {
                 {t('pricing.badge')}
               </div>
               <div className="flex items-baseline justify-center gap-2 mb-2">
-                <span dir="ltr" className="text-accent-dark text-6xl md:text-7xl font-black tracking-tight">{formatPrice(PRICE_AMOUNT, lang)}</span>
+                <span dir={lang === 'ar' ? 'rtl' : 'ltr'} className="text-accent-dark text-6xl md:text-7xl font-black tracking-tight block py-3">{formatPrice(PRICE_AMOUNT, lang)}</span>
               </div>
               <p className="text-text-dim text-xs font-medium">{t('pricing.trialText')}</p>
 
