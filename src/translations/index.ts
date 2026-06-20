@@ -5,7 +5,7 @@ export type TranslationKey =
   | 'header.essaiGratuit' | 'header.telechargerEssai' | 'header.systemManager'
   | 'hero.badge' | 'hero.titlePrefix' | 'hero.titleHighlight'
   | 'hero.description' | 'hero.button' | 'hero.screenshotAlt'
-  | 'hero.price' | 'hero.priceDzd' | 'hero.priceTag'
+  | 'hero.price' | 'hero.priceTag'
   | 'whatYouCanDo.title' | 'whatYouCanDo.description'
   | 'whatYouCanDo.item1Title' | 'whatYouCanDo.item1Desc'
   | 'whatYouCanDo.item2Title' | 'whatYouCanDo.item2Desc'
@@ -20,7 +20,7 @@ export type TranslationKey =
   | 'trust.item1' | 'trust.item2' | 'trust.item3' | 'trust.item4'
   | 'trust.item5' | 'trust.item6'
   | 'pricing.title' | 'pricing.description' | 'pricing.badge'
-  | 'pricing.price' | 'pricing.priceDzd'
+  | 'pricing.price'
   | 'pricing.benefit1' | 'pricing.benefit2' | 'pricing.benefit3'
   | 'pricing.benefit4' | 'pricing.benefit5' | 'pricing.benefit6'
   | 'pricing.paymentTitle' | 'pricing.paymentText'
@@ -171,8 +171,7 @@ const translations: Record<TranslationKey, { fr: string; ar: string }> = {
   'hero.badge': { fr: 'Offre de lancement', ar: 'عرض الإطلاق' },
   'hero.titlePrefix': { fr: 'Logiciel de gestion des ventes et des stocks', ar: 'برنامج إدارة المبيعات والمخزون' },
   'hero.titleHighlight': { fr: 'sans abonnement', ar: 'بدون اشتراك' },
-  'hero.price': { fr: '29 €', ar: '29 €' },
-  'hero.priceDzd': { fr: '= 7 250 DZD', ar: '= 7 250 د.ج' },
+  'hero.price': { fr: '7 250 د.ج', ar: '7 250 د.ج' },
   'hero.priceTag': { fr: 'Licence à vie • Paiement unique • Sans abonnement', ar: 'رخصة مدى الحياة • دفعة واحدة • بدون اشتراك' },
   'hero.description': { fr: "POS rapide, stock à jour, rapports clairs. Licence à vie, paiement unique.", ar: 'نقطة بيع سريعة، مخزون محدث، تقارير واضحة. رخصة مدى الحياة، دفعة واحدة.' },
   'hero.button': { fr: "Télécharger l'essai gratuit", ar: 'تحميل النسخة التجريبية' },
@@ -218,10 +217,9 @@ const translations: Record<TranslationKey, { fr: string; ar: string }> = {
 
   // Pricing — everything in one place
   'pricing.title': { fr: 'Une licence. Un paiement. À vie.', ar: 'رخصة واحدة. دفعة واحدة. مدى الحياة.' },
-  'pricing.description': { fr: '29 €. Sans abonnement. Aucune surprise.', ar: '29 €. بدون اشتراك. بدون مفاجآت.' },
+  'pricing.description': { fr: '7 250 د.ج. Sans abonnement. Aucune surprise.', ar: '7 250 د.ج. بدون اشتراك. بدون مفاجآت.' },
   'pricing.badge': { fr: 'Offre de lancement', ar: 'عرض الإطلاق' },
-  'pricing.price': { fr: '29 €', ar: '29 €' },
-  'pricing.priceDzd': { fr: '= 7 250 DZD', ar: '= 7 250 د.ج' },
+  'pricing.price': { fr: '7 250 د.ج', ar: '7 250 د.ج' },
   'pricing.tagline': { fr: 'Achetez une fois. Utilisez à vie.', ar: 'اشترِ مرة. استخدم مدى الحياة.' },
   'pricing.benefit1': { fr: 'Licence permanente', ar: 'رخصة دائمة' },
   'pricing.benefit2': { fr: 'Paiement unique', ar: 'دفعة واحدة' },
@@ -244,12 +242,12 @@ const translations: Record<TranslationKey, { fr: string; ar: string }> = {
   'workflow.step3Title': { fr: 'Tester 14 jours', ar: 'تجربة 14 يومًا' },
   'workflow.step3Desc': { fr: 'Essayez avec vos vraies données. Sans risque.', ar: 'جرب ببياناتك الحقيقية. بدون مخاطرة.' },
   'workflow.step4Title': { fr: 'Acheter la licence', ar: 'شراء الرخصة' },
-  'workflow.step4Desc': { fr: 'Licence à vie, paiement unique de 29 €.', ar: 'رخصة مدى الحياة، دفعة واحدة 29 €.' },
+  'workflow.step4Desc': { fr: 'Licence à vie, paiement unique de 7 250 د.ج.', ar: 'رخصة مدى الحياة، دفعة واحدة 7 250 د.ج.' },
   'workflow.step5Title': { fr: 'Utiliser à vie', ar: 'استخدام مدى الحياة' },
   'workflow.step5Desc': { fr: 'Profitez sans limite ni abonnement.', ar: 'استمتع بدون حدود ولا اشتراك.' },
   'workflow.badge': { fr: 'Essai gratuit 14 jours', ar: 'تجربة مجانية 14 يومًا' },
   'workflow.ctaTitle': { fr: 'Prêt à passer à l\'action ?', ar: 'مستعد للانطلاق؟' },
-  'workflow.ctaDescription': { fr: 'Téléchargez, installez et testez 14 jours. Si le logiciel vous convient, achetez la licence à vie 29 €.', ar: 'حمّل، ثبّت واختبر 14 يومًا. إذا ناسبك البرنامج، اشترِ الرخصة مدى الحياة 29 €.' },
+  'workflow.ctaDescription': { fr: 'Téléchargez, installez et testez 14 jours. Si le logiciel vous convient, achetez la licence à vie 7 250 د.ج.', ar: 'حمّل، ثبّت واختبر 14 يومًا. إذا ناسبك البرنامج، اشترِ الرخصة مدى الحياة 7 250 د.ج.' },
   'workflow.ctaButton': { fr: 'Télécharger l\'essai gratuit', ar: 'تحميل النسخة التجريبية' },
   'workflow.version': { fr: 'Version 1.0.0 stable', ar: 'إصدار 1.0.0 مستقر' },
   'workflow.compatible': { fr: 'Windows 10/11', ar: 'ويندوز 10/11' },
@@ -511,8 +509,7 @@ const translations: Record<TranslationKey, { fr: string; ar: string }> = {
   'cgv.s3P2': { fr: "La licence est personnelle et non cessible, sauf accord écrit de l'Éditeur.", ar: 'الرخصة شخصية وغير قابلة للتنازل، إلا بموافقة خطية من الناشر.' },
   'cgv.s4Title': { fr: '4. Prix', ar: '4. السعر' },
   'cgv.s4P1': { fr: 'Le prix de la licence est fixé à :', ar: 'سعر الرخصة محدد كالتالي:' },
-  'cgv.s4Li1': { fr: "29 € (EUR) — paiement unique", ar: '29 € (يورو) — دفعة واحدة' },
-  'cgv.s4Li2': { fr: "Équivalent en DZD : environ 7 250 DZD (selon le taux de change en vigueur)", ar: 'ما يعادل بالدينار الجزائري : حوالي 7 250 د.ج (حسب سعر الصرف)' },
+  'cgv.s4Li1': { fr: "7 250 د.ج — paiement unique", ar: '7 250 د.ج — دفعة واحدة' },
   'cgv.s4P2': { fr: 'Les prix sont indiqués toutes taxes comprises (TTC). Le Client est informé que les taxes applicables peuvent varier en fonction de son pays de résidence.', ar: 'الأسعار شاملة جميع الضرائب. يُعلم العميل أن الضرائب المطبقة قد تختلف حسب بلد إقامته.' },
   'cgv.s5Title': { fr: '5. Modes de paiement', ar: '5. طرق الدفع' },
   'cgv.s5P1': { fr: 'Les modes de paiement acceptés sont les suivants :', ar: 'طرق الدفع المقبولة هي التالية:' },

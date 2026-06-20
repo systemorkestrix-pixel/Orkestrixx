@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FileText, Package, Award, Euro, CreditCard, ShoppingCart, Truck, Undo2, ShieldCheck, Copyright, UserCheck, Handshake, Shield, Scale } from 'lucide-react';
+import { FileText, Package, Award, CreditCard, ShoppingCart, Truck, Undo2, ShieldCheck, Copyright, UserCheck, Handshake, Shield, Scale } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import LegalLayout from './LegalLayout';
 
@@ -56,14 +56,13 @@ export default function CGV() {
           ),
         },
         {
-          icon: <Euro className="w-full h-full" />,
+          icon: <CreditCard className="w-full h-full" />,
           title: t('cgv.s4Title'),
           children: (
             <>
               <p>{t('cgv.s4P1')}</p>
               <ul className="list-disc ps-5 space-y-1">
                 <li><strong>{t('cgv.s4Li1')}</strong></li>
-                <li><strong>{t('cgv.s4Li2')}</strong></li>
               </ul>
               <p>{t('cgv.s4P2')}</p>
             </>

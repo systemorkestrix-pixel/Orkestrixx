@@ -53,8 +53,7 @@ export default function Hero() {
                 <Shield className="w-4 h-4 text-accent-dark" />
                 {t('pricing.badge')}
               </div>
-              <span dir="ltr" className="text-6xl md:text-7xl font-black text-accent-dark tracking-tight leading-none">{t('hero.price')}</span>
-              <span dir="ltr" className="text-base text-text-muted font-medium">{t('hero.priceDzd')}</span>
+              <span className="text-6xl md:text-7xl font-black text-accent-dark tracking-tight leading-none">{t('hero.price')}</span>
               <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm font-bold text-text-secondary mt-1">
                 <span>{t('pricing.benefit1')}</span>
                 <span className="w-1 h-1 rounded-full bg-border"></span>
