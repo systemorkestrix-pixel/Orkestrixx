@@ -12,7 +12,7 @@ const benefits = [
 ] as const;
 
 export default function Pricing() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section id="pricing" className="py-24 bg-surface-alt border-t border-border relative z-10">
@@ -38,7 +38,7 @@ export default function Pricing() {
                 {t('pricing.badge')}
               </div>
               <div className="flex items-baseline justify-center gap-2 mb-2">
-                <span className="text-accent-dark text-6xl md:text-7xl font-black tracking-tight">{t('pricing.price')}</span>
+                <span dir={lang === 'ar' ? 'rtl' : 'ltr'} className="text-accent-dark text-6xl md:text-7xl font-black tracking-tight">{t('pricing.price')}</span>
               </div>
               <p className="text-text-dim text-xs font-medium">{t('pricing.trialText')}</p>
 
